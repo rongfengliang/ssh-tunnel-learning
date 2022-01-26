@@ -11,10 +11,10 @@ import java.util.Map;
 public class ExceptionAdvise {
 
     @ExceptionHandler(JSchException.class)
-    public  Object message(JSchException jSchException){
-        Map msg  = new HashMap();
-        msg.put("result","error");
-        msg.put("msg",jSchException.getMessage());
-        return  msg;
+    public Object message(JSchException jSchException) {
+        Map msg = new HashMap();
+        msg.put("result", "error");
+        msg.put("msg", jSchException.getMessage());
+        return msg;
     }
 }
