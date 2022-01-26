@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PreDestroy;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -56,6 +57,7 @@ public class SessionManage implements AutoCloseable {
         return sessionMap.get(key);
     }
 
+    @PreDestroy
     @Override
     public void close() throws Exception {
         for (Map.Entry<String, Session> sessionEntry : sessionMap.entrySet()) {
