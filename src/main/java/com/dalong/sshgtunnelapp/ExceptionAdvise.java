@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestControllerAdvice
-public class ExceptAdvise {
+public class ExceptionAdvise {
 
     @ExceptionHandler(JSchException.class)
     public  Object message(JSchException jSchException){
